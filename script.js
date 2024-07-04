@@ -1,8 +1,8 @@
 "use strict";
 
-const gridSize = 50;
+const gridSize = 100;
 const container = document.querySelector('.container');
-
+let isMouseDown = false;
 
 function drawGrid(sizeOfGrid) {
   for (let i = 0; i < sizeOfGrid; i++) {
@@ -16,11 +16,24 @@ function drawGrid(sizeOfGrid) {
       const rows = document.createElement('div');
       rows.setAttribute('class', 'rows');
       columns.appendChild(rows);
-      rows.addEventListener('mousedown', () => {
-        rows.style.backgroundColor = 'black';
-      });
+      
+      changeColor(rows);
     }
   }
+}
+
+function changeColor(pixel) {
+  pixel.addEventListener('mousedown', () => {
+    isMouseDown = true;
+  });
+  pixel.addEventListener('mouseup', () => {
+    isMouseDown = false;
+  });
+  pixel.addEventListener('mousemove', () => {
+    if (isMouseDown) {
+      pixel.style.backgroundColor = 'black';
+    }
+  });
 }
 
 drawGrid(gridSize);

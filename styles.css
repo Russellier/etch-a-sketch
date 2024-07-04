@@ -7,6 +7,7 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: rgb(255, 246, 232);
 }
 
 .container {
@@ -24,6 +25,6 @@
 }
 
 .columns div {
-  border: 1px solid #f4f4f4;
+  /* border: 1px solid white; */
   flex: 1;
 }
