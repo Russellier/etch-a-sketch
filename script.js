@@ -4,7 +4,7 @@ const gridSize = 50;
 const container = document.querySelector('.container');
 
 
-function createGrid(sizeOfGrid) {
+function drawGrid(sizeOfGrid) {
   for (let i = 0; i < sizeOfGrid; i++) {
 
     const columns = document.createElement('div');
@@ -16,8 +16,11 @@ function createGrid(sizeOfGrid) {
       const rows = document.createElement('div');
       rows.setAttribute('class', 'rows');
       columns.appendChild(rows);
+      rows.addEventListener('mousedown', () => {
+        rows.style.backgroundColor = 'black';
+      });
     }
   }
 }
 
-createGrid(gridSize);
+drawGrid(gridSize);
