@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  border: 2px solid #a1a1a1;
+  box-sizing: content-box;
+}
+
+.container .columns {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.columns div {
+  border: 1px solid #f4f4f4;
+  flex: 1;
+}
