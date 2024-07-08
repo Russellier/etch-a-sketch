@@ -7,35 +7,41 @@
     <title>Etch-a-Sketch</title>
   </head>
   <body>
-    <div class="container"></div>
-    
-    <div>
-      <label for="pen-size">Pen size:</label>
-      <select id="pen-size" class="pen-size">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4" selected>4</option>
-        <option value="5">5</option>
-      </select>
-    </div>
+    <div class="header"><h1>Etch-a-Sketch</h1></div>
 
-    <div>
-      <label for="pen-type">Pen type:</label> 
-      <select id="pen-type" class="pen-type">
-        <option value="pencil" selected>Pencil</option>
-        <option value="marker">Marker</option>
-      </select>
-    </div>
+    <div class="content">
+      <div class="container"></div>
+      
+      <div class="menu">
+        <div>
+          <label for="pen-size">Pen size:</label>
+          <select id="pen-size" class="pen-size">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
 
-    <div>
-      <label for="pen-color">Pen color:</label>
-      <input type="color" id="pen-color" class="pen-color" value="#000000">
-    </div>
+        <div>
+          <label for="pen-type">Pen type:</label> 
+          <select id="pen-type" class="pen-type">
+            <option value="pencil" selected>Pencil</option>
+            <option value="marker">Marker</option>
+          </select>
+        </div>
 
-    <div>
-      <label for="technicolor">Technicolor:</label>
-      <input type="checkbox" id="technicolor" class="technicolor">
+        <div>
+          <label for="pen-color">Pen color:</label>
+          <input type="color" id="pen-color" class="pen-color" value="#000000">
+        </div>
+
+        <div>
+          <label for="technicolor">Technicolor:</label>
+          <input type="checkbox" id="technicolor" class="technicolor">
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
