@@ -25,6 +25,16 @@
 }
 
 .columns div {
-  /* border: 1px solid white; */
+  border: 0.5px solid white;
   flex: 1;
+}
+
+.pen-size,
+.pen-type,
+.pen-color {
+  border: 1px solid gray;
+}
+
+.pencil {
+  opacity: 0.1;
 }
