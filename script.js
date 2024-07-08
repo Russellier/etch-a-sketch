@@ -27,7 +27,7 @@ function drawGrid(sizeOfGrid) {
   }
 }
 
-function pencilOrMarker() {
+function pencilOrMarker(pixel) {
   if (penType.value === 'pencil') {
     let opacity = Number(pixel.style.opacity);
     if (opacity < 1) {
@@ -60,7 +60,7 @@ function addListeners(pixel) {
   pixel.addEventListener('mouseover', (e) => {
     if (isMouseDown) {
       pixel.style.backgroundColor = penColor.value;
-      pencilOrMarker;
+      pencilOrMarker(pixel);
       // pixel.style.backgroundColor = randomColor();
     }
   });
