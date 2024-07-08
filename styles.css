@@ -68,3 +68,8 @@
 .technicolor:hover {
   cursor: pointer;
 }
+
+.instruction {
+  margin: 15px 0;
+}
+
