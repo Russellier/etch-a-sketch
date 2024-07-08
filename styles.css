@@ -29,12 +29,18 @@
   flex: 1;
 }
 
-.pen-size,
-.pen-type,
-.pen-color {
-  border: 1px solid gray;
-}
-
 .pencil {
   opacity: 0.1;
+}
+
+.technicolor {
+  height: 17px;
+  width: 17px;
+}
+
+.pen-size,
+.pen-type,
+.pen-color,
+.technicolor {
+  border: 1px solid gray;
 }

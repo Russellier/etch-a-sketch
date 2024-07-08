@@ -4,6 +4,7 @@ const container = document.querySelector('.container');
 const penSize = document.querySelector('.pen-size');
 const penType = document.querySelector('.pen-type');
 const penColor = document.querySelector('.pen-color');
+const technicolor = document.querySelector('.technicolor');
 let gridSize = 40;
 let isMouseDown = false;
 
@@ -59,9 +60,14 @@ function addListeners(pixel) {
 
   pixel.addEventListener('mouseover', (e) => {
     if (isMouseDown) {
-      pixel.style.backgroundColor = penColor.value;
-      pencilOrMarker(pixel);
-      // pixel.style.backgroundColor = randomColor();
+      if (technicolor.checked) {
+        penType.value = 'marker';
+        pixel.style.opacity = 1;
+        pixel.style.backgroundColor = randomColor();
+      } else {
+        pixel.style.backgroundColor = penColor.value;
+        pencilOrMarker(pixel);
+      }
     }
   });
 
