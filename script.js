@@ -28,6 +28,7 @@ function drawGrid(sizeOfGrid) {
   }
 }
 
+// Add 10% opacity for each pass
 function pencilOrMarker(pixel) {
   if (penType.value === 'pencil') {
     let opacity = Number(pixel.style.opacity);
@@ -49,6 +50,7 @@ function randomColor() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
+// Click and move mouse to paint
 function addListeners(pixel) {
   pixel.addEventListener('mousedown', () => {
     isMouseDown = true;
@@ -79,7 +81,3 @@ penSize.addEventListener('click', () => {
 });
 
 drawGrid(gridSize);
-
-
-// Allow user to select pen color
-// Allow user to 'erase'
